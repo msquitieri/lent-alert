@@ -1,5 +1,8 @@
 # Lent-alert
 
+We alert you every Friday during Lent to not eat meat!
+
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
@@ -30,3 +33,4 @@ programming in style.
 * [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
 * [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
 * [Style](http://github.com/thoughtbot/guides/blob/master/style)
+
