@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@import "normalize-rails";
+@import "bourbon";
+// @import "base/grid-settings";
+// @import "neat";
+@import "base/base";
+// @import "refills/flashes";
+
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+
+$base-font-family: "Raleway";
+$script-font-family: "Oleo Script";
+
+
+$default-background-color: rgb(38, 96, 152);
+$lightened-background-color: lighten($default-background-color, 20);
+
+body {
+  // background-color: rgb(38, 96, 152);
+  @include radial-gradient($default-background-color, lighten($default-background-color, 2), $fallback: $default-background-color);
+
+
+  font-family: $base-font-family, sans-serif;
+  color: #fff;
+}
+
+@import "home"

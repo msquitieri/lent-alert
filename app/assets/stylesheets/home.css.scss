@@ -1,0 +1,35 @@
+.home.home-index {
+  .call-to-action {
+    @extend .text-center;
+
+    p {
+      font-size: 25px;
+      margin-top: 2em;
+
+      &:first-of-type {
+        margin-bottom: 2em;
+      }
+    }
+
+    .sign-up-holder {
+      margin: auto;
+      width: 520px;
+
+      .sign-up-button {
+        cursor: pointer;
+
+        &:hover {
+          color: $lightened-background-color;
+        }
+      }
+
+    }
+  }
+
+  #lent-alert-main {
+    font-family: $script-font-family;
+    font-size: 100px;
+    font-style: italic;
+    text-shadow: -5px 0px 0px $lightened-background-color;
+  }
+}
