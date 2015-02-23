@@ -2,18 +2,14 @@
 
 @import "normalize-rails";
 @import "bourbon";
-// @import "base/grid-settings";
-// @import "neat";
 @import "base/base";
-// @import "refills/flashes";
-
 @import "bootstrap";
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
 
 $base-font-family: "Raleway";
 $script-font-family: "Oleo Script";
-
 
 $default-background-color: rgb(38, 96, 152);
 $lightened-background-color: lighten($default-background-color, 20);
@@ -25,6 +21,37 @@ body {
 
   font-family: $base-font-family, sans-serif;
   color: #fff;
+  font-weight: 800;
+}
+
+footer {
+  background-color: $lightened-background-color;
+  height: 100px;
+
+  .footer-info {
+    padding-top: 40px;
+    text-align: center;
+
+    .centerpiece {
+      font-size: 21px;
+    }
+
+    a {
+      color: white;
+      &:hover {
+        color: $default-background-color;
+      }
+
+
+      &:first-of-type {
+        margin-right: 2em;
+      }
+
+      &:last-of-type {
+        margin-left: 2em;
+      }
+    }
+  }
 }
 
 @import "home"

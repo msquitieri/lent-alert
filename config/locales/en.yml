@@ -19,3 +19,6 @@ en:
     application: Lent Alert
     subscriptions:
       unsubscribe: Unsubscribe
+  lenten:
+    lent_alert:
+      subject: "LENT ALERT! DO NOT EAT MEAT!"

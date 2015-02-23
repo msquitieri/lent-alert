@@ -1,12 +1,29 @@
 <div class="call-to-action">
-  <p>Have you ever bitten into a juicy hamburger, only to realize that it was a Friday during Lent. Sinner! Just kidding. But let's not make that happen again.</p>
+  <p class='subtitle'>Have you ever bitten into a juicy hamburger only to realize that it was a Friday during Lent. Sinner! Just kidding. But let's not make that happen again.</p>
 
-  <div class="sign-up-holder input-group input-group-lg">
-    <input id='email' type="text" class="form-control" placeholder="Email Address" aria-describedby="sizing-addon1">
-    <span class="sign-up-button input-group-addon" id="sizing-addon1">Sign Up</span>
+  <!-- <div class="sign-up-holder input-group input-group-lg"> -->
+  <div class="sign-up-holder">
+    <p id='prompt'>Send me an</p>
+    <%= collection_select :user, :alert_type, ['Email', 'Text Message'], :to_s, :to_s, {}, {class: 'selectpicker'} %>
+    <p>at</p>
+    <div class="time clearfix">
+      <input id='selected-time' type="text" class="time-selector">
+      <div class="select-holder">
+        <%= collection_select(:user, :time_zone, ActiveSupport::TimeZone.us_zones, :name, :name, {prompt: "Select Time Zone"}, {class: 'selectpicker', id: 'time-zone-picker'}) %>
+      </div>
+    </div>
+    <p>to</p>
+    <input id='contact' type="text" class="form-control" placeholder="Email Address">
+    <p>every Friday and holiday during Lent so I don't forget to not eat meat!</p>
+    <button class="sign-up-button">Sign Up</button>
+  </div>
+  <p>Don't worry. We will only use your information to send you alerts!</p>
+
+  <div class="twitter-holder">
+    <h1>Follow us Twitter</h1>
+    <%= render partial: 'shared/twitter_feed_widget' %>
   </div>
 
-  <p>We alert you every Friday during Lent to make sure you don't accidently eat meat.</p>
 </div>
 
 

@@ -1,8 +1,8 @@
-.home.home-index {
+// .home.home-index {
   .call-to-action {
     @extend .text-center;
 
-    p {
+    .subtitle {
       font-size: 25px;
       margin-top: 2em;
 
@@ -13,12 +13,19 @@
 
     .sign-up-holder {
       margin: auto;
-      width: 520px;
+      width: 700px;
+
+      p {
+        margin: 10px 0;
+        font-size: 21px;
+      }
 
       .sign-up-button {
         cursor: pointer;
+        margin: 1em;
 
         &:hover {
+          background-color: white;
           color: $lightened-background-color;
         }
       }
@@ -26,10 +33,41 @@
     }
   }
 
-  #lent-alert-main {
+  #contact {
+    margin: auto;
+    width: 300px;
+  }
+
+  #email {
+    width: 40%;
+    margin: auto;
+  }
+
+  .time-selector {
+    color: black;
+    font-family: $base-font-family, sans-serif;
+    display: block;
+    width: 90px !important;
+    float: left;
+    margin-left: 230px;
+  }
+
+  .select-holder {
+    float: right;
+    margin-right: 150px;
+  }
+
+  .lent-alert-main {
     font-family: $script-font-family;
     font-size: 100px;
     font-style: italic;
     text-shadow: -5px 0px 0px $lightened-background-color;
   }
-}
+
+  .twitter-holder {
+    h1 {
+      margin-bottom: 1em;
+    }
+    margin: 6em 0 6em 0;
+  }
+// }

@@ -11,17 +11,28 @@
   %>
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
+  <%= stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css' %>
+  <%= stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.6.0/jquery.timepicker.min.css' %>
+  <%= stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/sweetalert/0.4.2/sweet-alert.min.css' %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
   <div class="container">
     <%= render "flashes" -%>
     <div class="text-center">
-      <h1 id ='lent-alert-main' class="text-center">Lent Alert</h1>
+      <h1 class="lent-alert-main text-center">Lent Alert</h1>
     </div>
 
     <%= yield %>
   </div>
+
+  <footer>
+    <div class="footer-info">
+    <%= link_to 'Manage Subscription', '/registrations/edit' %>
+    <span class="centerpiece">Made in Brooklyn</span>
+    <%= link_to 'Contact Us', 'mailto:atone@lentalert.com' %>
+    </div>
+  </footer>
   <%= render "javascript" %>
 </body>
 </html>

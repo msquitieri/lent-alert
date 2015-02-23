@@ -19,6 +19,12 @@ gem "uglifier"
 gem "unicorn"
 gem "flutie"
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'premailer-rails'
+gem 'nokogiri'
+gem 'responders', '~> 2.0'
+gem 'twilio-ruby', '~> 3.12'
+gem 'phony_rails', '~> 0.9.0'
+gem 'rails_admin', '~> 0.6.6'
 
 group :development do
   gem "spring"
