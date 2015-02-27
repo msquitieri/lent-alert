@@ -11,8 +11,8 @@
 $base-font-family: "Raleway";
 $script-font-family: "Oleo Script";
 
-$default-background-color: rgb(38, 96, 152);
-$lightened-background-color: lighten($default-background-color, 20);
+$darkened-background-color: rgb(38, 96, 152);
+$default-background-color: lighten($darkened-background-color, 20);
 
 body {
   // background-color: rgb(38, 96, 152);
@@ -25,11 +25,12 @@ body {
 }
 
 footer {
-  background-color: $lightened-background-color;
+  background-color: $darkened-background-color;
   height: 100px;
 
   .footer-info {
     padding-top: 40px;
+    padding-right: 2em;
     text-align: center;
 
     .centerpiece {

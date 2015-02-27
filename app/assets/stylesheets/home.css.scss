@@ -26,7 +26,16 @@
 
         &:hover {
           background-color: white;
-          color: $lightened-background-color;
+          color: $default-background-color;
+        }
+      }
+
+      .stop-alerts-button {
+        margin: 1em;
+
+        &:hover {
+          background-color: white;
+          color: #d9534f;
         }
       }
 
@@ -61,7 +70,7 @@
     font-family: $script-font-family;
     font-size: 100px;
     font-style: italic;
-    text-shadow: -5px 0px 0px $lightened-background-color;
+    text-shadow: -3px 0px 0px $darkened-background-color;
   }
 
   .twitter-holder {
