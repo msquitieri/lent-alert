@@ -30,7 +30,8 @@ class User < ActiveRecord::Base
   end
 
   def send_alert_via_email
-    LentenMailer.lent_alert(self).deliver_now
+    email = Email.last
+    LentenMailer.lent_alert(self, email).deliver_now
   end
 
   def presence_of_contact_information

@@ -1,13 +1,9 @@
 class LentenMailer < ApplicationMailer
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.lenten.lent_alert.subject
-  #
-  def lent_alert(user)
+  def lent_alert(user, email)
     @user = user
+    @email = email
 
-    mail to: user.email, subject: 'LENT ALERT'
+    mail to: user.email, subject: @email.subject
   end
 end
