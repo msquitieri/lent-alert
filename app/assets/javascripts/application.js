@@ -35,11 +35,15 @@ $(document).ready(function() {
     $prompt.html(promptText);
   });
 
+  function getContactType(value) {
+    return value == 'Email' ? 'email' : 'text message';
+  }
+
   $('.sign-up-button').on('click', function() {
     var timeZone = $('#time-zone-picker').val();
     var contact = $('#contact').val();
     var selectedTime = $('#selected-time').val();
-    var contactType = $('#user_alert_type').val() == 'Email' ? 'email' : 'text message';
+    var contactType = getContactType($('#user_alert_type').val());
 
     $.ajax({
       url: '/api/v1/users/',
@@ -58,6 +62,36 @@ $(document).ready(function() {
       } else if (xhr.status == 422) {
         sweetAlert("Uh oh.", 'It seems like your ' + xhr.responseJSON.error.message, "error");
       }
+    });
+  });
+
+  $('.stop-alerts-button').on('click', function() {
+    var contactType = getContactType($('#user_alert_type').val());
+    var contactInfo = $('#contact').val();
+
+    sweetAlert({
+      title: 'Are you sure?',
+      text: 'We will miss you!',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Yes, stop the alerts.",
+      closeOnConfirm: false
+    }, function() {
+      $.ajax({
+        url: '/api/v1/users/delete',
+        type: 'DELETE',
+        data: {
+          contact_info: contactInfo,
+          contact_type: contactType
+        }
+      }).then(function() {
+        swal("Success!", "You will no longer receive alerts from lentalert.com.", "success");
+      }, function(xhr) {
+        if (xhr.status == 404) {
+          swal("Oops", "It looks like that user doesn't exist.");
+        }
+      });
     });
   });
 });
