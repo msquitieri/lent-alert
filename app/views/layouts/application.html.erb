@@ -26,13 +26,12 @@
     <%= yield %>
   </div>
 
-  <footer>
-    <div class="footer-info">
-    <%= link_to 'Manage Subscription', '/registrations/edit' %>
-    <span class="centerpiece">Made in Brooklyn</span>
-    <%= link_to 'Contact Us', 'mailto:atone@lentalert.com' %>
-    </div>
-  </footer>
+  <% if content_for? :footer %>
+    <footer>
+      <%= yield :footer %>
+    </footer>
+  <% end %>
+
   <%= render "javascript" %>
 </body>
 </html>
