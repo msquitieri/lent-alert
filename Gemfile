@@ -19,7 +19,7 @@ gem "uglifier"
 gem "unicorn"
 gem "flutie"
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'premailer-rails'
+# gem 'premailer-rails'
 gem 'nokogiri'
 gem 'responders', '~> 2.0'
 gem 'twilio-ruby', '~> 3.12'
