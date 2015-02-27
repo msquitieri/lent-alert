@@ -1,0 +1,17 @@
+<div class="call-to-action">
+  <h3>Edit Subscription</h3>
+
+  <div class="sign-up-holder">
+    <%= collection_select :user, :alert_type, ['Email', 'Text Message'], :to_s, :to_s, {}, {class: 'selectpicker'} %>
+    <br>
+    <br>
+    <input id='contact' type="text" class="form-control" placeholder="Email Address">
+    <button class="stop-alerts-button btn-danger">Stop Getting Alerts</button>
+  </div>
+
+</div>
+
+
+
+
+
