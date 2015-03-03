@@ -17,7 +17,11 @@
 
 
 $(document).ready(function() {
-  $('.time-selector').timepicker();
+  $('.time-selector').timepicker({
+    step: 60,
+    minTime: '5:00am',
+    maxTime: '11:00pm'
+  });
 
   $('#user_alert_type').on('change', function() {
     var val = $(this).val();
