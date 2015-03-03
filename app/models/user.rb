@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
 
   validates_presence_of :alert_hour, :alert_minute
 
+  scope :with_hour, ->(hour) { where(alert_hour: hour) }
+  scope :with_minute, ->(minute) { where(alert_minute: minute) }
+
   def send_alert
     if phone_number.present?
       send_alert_via_text
