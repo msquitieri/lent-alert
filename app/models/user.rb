@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
     Twilio::REST::Client.new.messages.create(
       from: TWILIO_NUMBER,
       to: phone_number,
-      message: Message.last.text
+      body: Message.last.text
     )
   end
 
